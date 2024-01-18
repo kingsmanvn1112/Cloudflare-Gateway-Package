@@ -2,7 +2,7 @@ name: Add Rules to Cloudflare Gateway
 on:
   push:
   schedule:
-    - cron: "0 * * * 6"
+    - cron: "0 1/1 * * *"
   workflow_dispatch:
 jobs:
   run:
@@ -18,13 +18,13 @@ jobs:
         uses: actions/checkout@main
         with:
           fetch-depth: 0
-          
-      - name: Keep alive 
+
+      - name: Keep alive
         uses: gautamkrishnar/keepalive-workflow@v1
-          
-      - name: Cloudflare Gateway Zero Trust 
+
+      - name: Cloudflare Gateway Zero Trust
         run: bash run.sh
-          
+
       - name: Delete workflow runs
         uses: Mattraks/delete-workflow-runs@v2
         with:

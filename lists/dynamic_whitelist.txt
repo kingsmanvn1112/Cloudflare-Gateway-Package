@@ -1,4 +1,4 @@
-# connect.facebook.net
+connect.facebook.net
 api-js.datadome.co
 cloud.answerhub.com
 gov
